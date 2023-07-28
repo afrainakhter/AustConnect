@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    tools:context=".BusActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginLeft="20dp"
+        >
+
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/baseline_home_24"
+        android:backgroundTint="@color/white"
+        android:layout_marginRight="10dp"
+
+        >
+
+    </ImageButton>
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/baseline_people_alt_24"
+        android:backgroundTint="@color/white"
+
+        android:layout_marginRight="10dp"
+        >
+
+    </ImageButton>
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/baseline_business_center_24"
+        android:backgroundTint="@color/white"
+
+        android:layout_marginRight="10dp"
+        >
+
+    </ImageButton>
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/baseline_event_24"
+        android:backgroundTint="@color/white"
+
+        android:layout_marginRight="10dp"
+        >
+
+    </ImageButton>
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/baseline_notifications_24"
+        android:backgroundTint="@color/white"
+        android:id="@+id/notification"
+        android:layout_marginRight="10dp"
+        >
+
+    </ImageButton>
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/baseline_menu_24"
+        android:backgroundTint="@color/white"
+        android:id="@+id/menu"
+
+        >
+
+    </ImageButton>
+
+    </LinearLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Buses"
+            android:textSize="30dp"
+            android:layout_margin="5dp"
+            android:textColor="@color/black"
+            >
+
+        </TextView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="150dp"
+            android:layout_height="80dp"
+            android:layout_margin="20dp"
+            android:backgroundTint="#BDFAB9"
+
+
+
+            >
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/baseline_directions_bus_24"
+                android:backgroundTint="#BDFAB9"
+
+                >
+
+            </ImageButton>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="মেঘনা"
+                android:textSize="20dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginLeft="10dp"
+                android:textColor="@color/black"
+                >
+
+
+            </TextView>
+
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+</ScrollView>

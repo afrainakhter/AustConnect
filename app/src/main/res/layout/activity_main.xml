@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+
+
+
+
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+    <ImageView
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="5dp"
+        android:src="@drawable/head"
+
+        >
+
+    </ImageView>
+        <SearchView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="130dp"
+            >
+
+        </SearchView>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginLeft="20dp"
+        >
+
+
+           <ImageButton
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:src="@drawable/baseline_home_24"
+               android:backgroundTint="@color/white"
+               android:layout_marginRight="10dp"
+
+               >
+
+           </ImageButton>
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/baseline_people_alt_24"
+            android:backgroundTint="@color/white"
+
+            android:layout_marginRight="10dp"
+            >
+
+        </ImageButton>
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/baseline_business_center_24"
+            android:backgroundTint="@color/white"
+
+            android:layout_marginRight="10dp"
+            >
+
+        </ImageButton>
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/baseline_event_24"
+            android:backgroundTint="@color/white"
+
+            android:layout_marginRight="10dp"
+            >
+
+        </ImageButton>
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/baseline_notifications_24"
+            android:backgroundTint="@color/white"
+            android:id="@+id/notification"
+            android:layout_marginRight="10dp"
+            >
+
+        </ImageButton>
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/baseline_menu_24"
+            android:backgroundTint="@color/white"
+            android:id="@+id/menu"
+
+            >
+
+        </ImageButton>
+
+    </LinearLayout>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    >
+
+<de.hdodenhof.circleimageview.CircleImageView
+    android:layout_width="40dp"
+    android:layout_height="40dp"
+    android:src="@drawable/profile"
+    android:layout_marginLeft="20dp"
+    android:layout_marginTop="10dp"
+    >
+
+
+</de.hdodenhof.circleimageview.CircleImageView>
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:layout_width="280dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:background="@drawable/edittext"
+        >
+
+    </androidx.appcompat.widget.AppCompatEditText>
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/baseline_photo_library_24"
+        android:backgroundTint="@color/white"
+         android:layout_marginTop="5dp"
+        >
+
+    </ImageButton>
+
+
+
+</LinearLayout>
+
+
+
+
+
+
+</LinearLayout>
+
+
+
+</ScrollView>

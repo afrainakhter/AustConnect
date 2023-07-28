@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "173885764677",
+    "project_id": "austconnect-ad285",
+    "storage_bucket": "austconnect-ad285.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:173885764677:android:450daede2b5881ce4fdf2c",
+        "android_client_info": {
+          "package_name": "com.example.austconnect"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "173885764677-4k7a2l94n6psfgsi7evs95l7ok0a1smj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD5y-mwWxMLG7Y-aOTkLFBFP7YUcUQlV8w"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "173885764677-4k7a2l94n6psfgsi7evs95l7ok0a1smj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
