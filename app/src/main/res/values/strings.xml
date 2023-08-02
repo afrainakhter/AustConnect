@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">AustConnect</string>
+    <string-array name="choice_items">
+        <item>I AM DRIVER</item>
+        <item>I AM STUDENT</item>
+    </string-array>
 </resources>

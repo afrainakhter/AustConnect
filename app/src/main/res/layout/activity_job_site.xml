@@ -1,15 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context=".MeghnaBusTime">
+    tools:context=".JobSite">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:orientation="vertical"
 
         >
@@ -18,8 +17,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="5dp"
+            android:layout_marginLeft="0dp"
+            android:layout_marginTop="0dp"
+            android:background="@color/white"
             >
 
 
@@ -27,8 +27,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:src="@drawable/baseline_home_24"
-                android:backgroundTint="#ECE3E3"
+                android:backgroundTint="#FFFFFF"
                 android:layout_marginRight="10dp"
+                android:id="@+id/home"
 
                 >
 
@@ -37,8 +38,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:src="@drawable/baseline_people_alt_24"
-                android:backgroundTint="#ECE3E3"
-
+                android:id="@+id/friend"
+                android:backgroundTint="#FFFFFF"
                 android:layout_marginRight="10dp"
                 >
 
@@ -47,8 +48,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:src="@drawable/baseline_business_center_24"
-                android:backgroundTint="#ECE3E3"
-
+                android:backgroundTint="#FFFFFF"
+                android:id="@+id/jobSite"
                 android:layout_marginRight="10dp"
                 >
 
@@ -57,8 +58,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:src="@drawable/baseline_event_24"
-                android:backgroundTint="#ECE3E3"
-
+                android:backgroundTint="#FFFFFF"
+                android:id="@+id/event"
                 android:layout_marginRight="10dp"
                 >
 
@@ -67,8 +68,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:src="@drawable/baseline_notifications_24"
-                android:backgroundTint="#ECE3E3"
-
+                android:backgroundTint="#FFFFFF"
+                android:id="@+id/notification"
                 android:layout_marginRight="10dp"
                 >
 
@@ -77,7 +78,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:src="@drawable/baseline_menu_24"
-                android:backgroundTint="#ECE3E3"
+                android:backgroundTint="#FFFFFF"
+                android:id="@+id/menu"
 
                 >
 
@@ -88,30 +90,4 @@
     </LinearLayout>
 
 
-
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text= "Share Location"
-        android:textSize="50dp"
-        android:layout_marginTop="20dp"
-        android:id="@+id/Six"
-
-        >
-
-
-    </TextView>
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="See location"
-        android:textSize="50dp"
-        android:layout_marginTop="20dp"
-
-        >
-
-
-    </TextView>
-
-</LinearLayout>
+</ScrollView>

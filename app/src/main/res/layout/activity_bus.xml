@@ -12,120 +12,153 @@
         android:orientation="vertical"
         >
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginLeft="20dp"
-        >
+        <LinearLayout
 
-
-    <ImageButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/baseline_home_24"
-        android:backgroundTint="@color/white"
-        android:layout_marginRight="10dp"
-
-        >
-
-    </ImageButton>
-    <ImageButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/baseline_people_alt_24"
-        android:backgroundTint="@color/white"
-
-        android:layout_marginRight="10dp"
-        >
-
-    </ImageButton>
-    <ImageButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/baseline_business_center_24"
-        android:backgroundTint="@color/white"
-
-        android:layout_marginRight="10dp"
-        >
-
-    </ImageButton>
-    <ImageButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/baseline_event_24"
-        android:backgroundTint="@color/white"
-
-        android:layout_marginRight="10dp"
-        >
-
-    </ImageButton>
-    <ImageButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/baseline_notifications_24"
-        android:backgroundTint="@color/white"
-        android:id="@+id/notification"
-        android:layout_marginRight="10dp"
-        >
-
-    </ImageButton>
-    <ImageButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/baseline_menu_24"
-        android:backgroundTint="@color/white"
-        android:id="@+id/menu"
-
-        >
-
-    </ImageButton>
-
-    </LinearLayout>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Buses"
-            android:textSize="30dp"
-            android:layout_margin="5dp"
-            android:textColor="@color/black"
-            >
-
-        </TextView>
-
-        <androidx.cardview.widget.CardView
-            android:layout_width="150dp"
-            android:layout_height="80dp"
-            android:layout_margin="20dp"
-            android:backgroundTint="#BDFAB9"
-
-
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#D4EDD8"
+            android:orientation="vertical"
 
             >
 
-            <ImageButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/baseline_directions_bus_24"
-                android:backgroundTint="#BDFAB9"
-
-                >
-
-            </ImageButton>
-            <TextView
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="মেঘনা"
-                android:textSize="20dp"
-                android:layout_marginTop="40dp"
-                android:layout_marginLeft="10dp"
-                android:textColor="@color/black"
-                >
+                android:layout_height="50dp"
+                android:background="@color/white"
+                android:orientation="horizontal">
 
 
-            </TextView>
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
 
-        </androidx.cardview.widget.CardView>
+                    android:layout_marginRight="15dp"
+                    android:backgroundTint="@color/white"
+                    android:src="@drawable/baseline_home_24"
+
+                    >
+
+                </ImageButton>
+
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="15dp"
+                    android:backgroundTint="@color/white"
+
+                    android:src="@drawable/baseline_people_alt_24">
+
+                </ImageButton>
+
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="15dp"
+                    android:backgroundTint="@color/white"
+
+                    android:src="@drawable/baseline_business_center_24">
+
+                </ImageButton>
+
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="15dp"
+                    android:backgroundTint="@color/white"
+
+                    android:src="@drawable/baseline_event_24">
+
+                </ImageButton>
+
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="15dp"
+                    android:backgroundTint="@color/white"
+
+                    android:src="@drawable/baseline_notifications_24">
+
+                </ImageButton>
+
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="20dp"
+                    android:backgroundTint="@color/white"
+                    android:src="@drawable/baseline_menu_24"
+                    >
+
+                </ImageButton>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="410dp"
+                android:layout_height="690dp"
+                android:layout_marginStart="1dp"
+                android:layout_marginLeft="1dp"
+                android:layout_marginTop="1dp"
+                android:layout_marginEnd="1dp"
+                android:layout_marginBottom="1dp"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/location"
+                    android:layout_width="300dp"
+                    android:layout_height="50dp"
+                    android:layout_marginBottom="10dp"
+                    android:backgroundTint="#029A08"
+                    android:text="LOCATION"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    />
+
+
+                <Button
+                    android:id="@+id/schedule"
+                    android:layout_width="300dp"
+                    android:layout_height="50dp"
+                    android:backgroundTint="#029A08"
+                    android:layout_marginBottom="10dp"
+                    android:text="SCHEDULE"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+
+
+                    />
+
+                <Button
+                    android:id="@+id/route"
+                    android:layout_width="300dp"
+                    android:layout_height="50dp"
+                    android:backgroundTint="#029A08"
+                    android:layout_marginBottom="10dp"
+                    android:text="ROUTE"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+
+
+                    />
+
+                <Button
+                    android:id="@+id/about"
+                    android:layout_width="300dp"
+                    android:layout_height="50dp"
+                    android:backgroundTint="#029A08"
+                    android:text="ABOUT US"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+
+
+                    />
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
 
     </LinearLayout>
 </ScrollView>

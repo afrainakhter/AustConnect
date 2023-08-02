@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="#ECE3E3"
+    android:background="#D4EDD8"
 
     tools:context=".Menu">
 
@@ -21,8 +21,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="5dp"
+            android:layout_marginLeft="0dp"
+            android:layout_marginTop="0dp"
+            android:background="@color/white"
             >
 
 
@@ -30,8 +31,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:src="@drawable/baseline_home_24"
-                android:backgroundTint="#ECE3E3"
+                android:backgroundTint="#FFFFFF"
                 android:layout_marginRight="10dp"
+                android:id="@+id/home"
 
                 >
 
@@ -40,8 +42,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:src="@drawable/baseline_people_alt_24"
-                android:backgroundTint="#ECE3E3"
-
+                  android:id="@+id/friend"
+                android:backgroundTint="#FFFFFF"
                 android:layout_marginRight="10dp"
                 >
 
@@ -50,8 +52,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:src="@drawable/baseline_business_center_24"
-                android:backgroundTint="#ECE3E3"
-
+                android:backgroundTint="#FFFFFF"
+                android:id="@+id/jobSite"
                 android:layout_marginRight="10dp"
                 >
 
@@ -60,8 +62,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:src="@drawable/baseline_event_24"
-                android:backgroundTint="#ECE3E3"
-
+                android:backgroundTint="#FFFFFF"
+                android:id="@+id/event"
                 android:layout_marginRight="10dp"
                 >
 
@@ -70,8 +72,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:src="@drawable/baseline_notifications_24"
-                android:backgroundTint="#ECE3E3"
-
+                android:backgroundTint="#FFFFFF"
+                android:id="@+id/notification"
                 android:layout_marginRight="10dp"
                 >
 
@@ -80,7 +82,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:src="@drawable/baseline_menu_24"
-                android:backgroundTint="#ECE3E3"
+                android:backgroundTint="#FFFFFF"
+                android:id="@+id/menu"
 
                 >
 
@@ -103,7 +106,7 @@
             android:layout_width="380dp"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:background="#ECE3E3"
+            android:backgroundTint="#D4EDD8"
             android:layout_marginTop="10dp"
             android:layout_marginLeft="20dp"
             android:layout_marginBottom="10dp"
@@ -226,6 +229,7 @@
                 android:layout_height="80dp"
                 android:layout_margin="20dp"
                 android:backgroundTint="#FFFFFF"
+                android:id="@+id/busService"
 
 
 

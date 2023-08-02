@@ -14,7 +14,7 @@ public class MainActivity extends AppCompatActivity {
 
     FirebaseAuth auth;
     FirebaseUser user;
-    ImageButton menu;
+    ImageButton menu,event,notification,friends,jobsite,home;
 
 
     @Override
@@ -24,6 +24,14 @@ public class MainActivity extends AppCompatActivity {
         auth=FirebaseAuth.getInstance();
         user=auth.getCurrentUser();
         menu=findViewById(R.id.menu);
+        home=findViewById(R.id.home);
+        event=findViewById(R.id.event);
+        friends=findViewById(R.id.friend);
+        notification=findViewById(R.id.notification);
+        jobsite=findViewById(R.id.jobSite);
+
+
+
         if(user==null){
 
             Intent intent= new Intent(MainActivity.this, login.class);
@@ -35,6 +43,33 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent= new Intent(MainActivity.this, Menu.class);
+                startActivity(intent);
+                finish();
+            }
+        });
+
+
+        home.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent= new Intent(MainActivity.this, MainActivity.class);
+                startActivity(intent);
+                finish();
+            }
+        });
+        event.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent= new Intent(MainActivity.this, Event.class);
+                startActivity(intent);
+                finish();
+            }
+        });
+
+        notification.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent= new Intent(MainActivity.this, Notification.class);
                 startActivity(intent);
                 finish();
             }
