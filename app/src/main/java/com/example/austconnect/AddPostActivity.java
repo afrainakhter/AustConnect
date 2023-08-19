@@ -205,6 +205,7 @@ DatabaseReference reference;
                          hashMap.put("Description",des);
                          hashMap.put("pImage",downloadUri);
                          hashMap.put("pTime",timeStamp);
+                         hashMap.put("pLike","0");
 
                          FirebaseDatabase database=FirebaseDatabase.getInstance();
 
@@ -263,6 +264,7 @@ DatabaseReference reference;
              hashMap.put("Description",des);
              hashMap.put("pImage","noImage");
              hashMap.put("pTime",timeStamp);
+             hashMap.put("pLike","0");
 
              FirebaseDatabase database=FirebaseDatabase.getInstance();
 
@@ -459,5 +461,12 @@ DatabaseReference reference;
     public boolean onSupportNavigateUp() {
         onBackPressed();
         return super.onSupportNavigateUp();
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        startActivity(new Intent(AddPostActivity.this,MainActivity.class));
+
     }
 }

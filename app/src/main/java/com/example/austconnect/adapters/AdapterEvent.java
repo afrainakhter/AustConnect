@@ -27,6 +27,7 @@ import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
@@ -45,11 +46,19 @@ public class AdapterEvent extends RecyclerView.Adapter<AdapterEvent.MyHolder> {
     Context context;
     List<ModelEvent>eventList;
     String myUid;
+    boolean aProcessLike=false;
 
+    private DatabaseReference likeRef;
+    private DatabaseReference postsRef;
     public AdapterEvent(Context context, List<ModelEvent> eventList) {
         this.context = context;
         this.eventList = eventList;
         myUid= FirebaseAuth.getInstance().getCurrentUser().getUid();
+
+        likeRef=FirebaseDatabase.getInstance().getReference().child("Likes");
+        postsRef=FirebaseDatabase.getInstance().getReference().child("Events");
+
+
     }
 
     @NonNull
@@ -75,7 +84,7 @@ public class AdapterEvent extends RecyclerView.Adapter<AdapterEvent.MyHolder> {
         String pTimeStamp=eventList.get(i).getpTime();
         String eName=eventList.get(i).getEventName();
         String deptartment=eventList.get(i).geteDepeartment();
-
+        String pLike=eventList.get(i).getpLike();
 
 
         Calendar calendar=Calendar.getInstance(Locale.ENGLISH);
@@ -83,12 +92,14 @@ public class AdapterEvent extends RecyclerView.Adapter<AdapterEvent.MyHolder> {
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy/MM/dd_HH:mm:ss", Locale.getDefault());
         String currentDateandTime = sdf.format(new Date());
 
+        holder.eventLike.setText(pLike+ " Likes");
         holder.eventName.setText(eName);
         holder.eventDepartment.setText(deptartment);
         holder.userName.setText(name);
         holder.eventTitle.setText(pTitle);
         holder.eventDescription.setText(pDescription);
         holder.eventTime.setText(currentDateandTime);
+        setLikes(holder,pId);
 
         try{
             Picasso.get().load(uDP).placeholder(R.drawable.ic_add_photo).into(holder.userImg);
@@ -125,7 +136,34 @@ public class AdapterEvent extends RecyclerView.Adapter<AdapterEvent.MyHolder> {
         holder.likeBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(context, "Like", Toast.LENGTH_SHORT).show();
+                int pLike=Integer.parseInt(eventList.get(i).getpLike());
+                aProcessLike=true;
+                String postIde=eventList.get(i).getpId();
+                likeRef.addValueEventListener(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(@NonNull DataSnapshot snapshot) {
+                        if(aProcessLike){
+                            if(snapshot.child(postIde).hasChild(myUid)){
+                                postsRef.child(postIde).child("pLike").setValue(""+(pLike-1));
+                                likeRef.child(postIde).child(myUid).removeValue();
+                                aProcessLike=false;
+                            }else{
+
+                                postsRef.child(postIde).child("pLike").setValue(""+(pLike+1));
+                                likeRef.child(postIde).child(myUid).setValue("Liked");
+
+                                aProcessLike=false;
+
+                            }
+                        }
+
+                    }
+
+                    @Override
+                    public void onCancelled(@NonNull DatabaseError error) {
+
+                    }
+                });
 
 
             }
@@ -154,6 +192,32 @@ public class AdapterEvent extends RecyclerView.Adapter<AdapterEvent.MyHolder> {
     }
 
 
+    private void setLikes(AdapterEvent.MyHolder holder, String postKey) {
+        likeRef.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                if(snapshot.child(postKey).hasChild(myUid)){
+                    holder.likeBtn.setCompoundDrawablesWithIntrinsicBounds(R.drawable.baseline_thumb_up_24_after,0 ,0, 0);
+                    holder.likeBtn.setText("Liked");
+
+                }else{
+                    holder.likeBtn.setCompoundDrawablesWithIntrinsicBounds(R.drawable.baseline_thumb_up_24,0 ,0, 0);
+                    holder.likeBtn.setText("Like");
+
+
+
+                }
+
+
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
+
+    }
 
 
     @Override

@@ -2,16 +2,17 @@ package com.example.austconnect.models;
 
 public class ModelEvent {
 
-    String pId,pTitle,pTime,Description,pImage,uid,email,uDP,name,eDepeartment,eventName;
+    String pLike,pId,pTitle,pTime,Description,pImage,uid,email,uDP,name,eDepeartment,eventName;
 
 
     public ModelEvent() {
     }
 
-    public ModelEvent(String pId, String pTitle, String pTime, String description, String pImage, String uid, String email, String uDP, String name, String eDepeartment, String eventName) {
+    public ModelEvent(String pLike,String pId, String pTitle, String pTime, String description, String pImage, String uid, String email, String uDP, String name, String eDepeartment, String eventName) {
         this.pId = pId;
         this.pTitle = pTitle;
         this.pTime = pTime;
+        this.pLike = pLike;
         Description = description;
         this.pImage = pImage;
         this.uid = uid;
@@ -20,6 +21,14 @@ public class ModelEvent {
         this.name = name;
         this.eDepeartment = eDepeartment;
         this.eventName = eventName;
+    }
+
+    public void setpLike(String pLike) {
+        this.pLike = pLike;
+    }
+
+    public String getpLike() {
+        return pLike;
     }
 
     public String getpId() {

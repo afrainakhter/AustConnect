@@ -8,6 +8,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.austconnect.adapters.AdapterUsers;
@@ -30,11 +31,11 @@ public class Menu extends AppCompatActivity {
     FirebaseDatabase database;
     DatabaseReference databaseReference;
     AdapterUsers adapterUsers;
-    TextView logout,profileName;
+    TextView logout,profileName,Edit;
 
     ImageButton home,event,jobsite,friends,notification;
     CardView bus,help,blood,comment,research,job,friend,events;
-    CircleImageView profileImg;
+    ImageView profileImg;
 
 
 
@@ -61,12 +62,7 @@ public class Menu extends AppCompatActivity {
         job=findViewById(R.id.jobOffers);
         friend=findViewById(R.id.friendCard);
         events=findViewById(R.id.eventCard);
-
-
-
-
-
-
+        Edit=findViewById(R.id.EditProfile);
         profileImg=findViewById(R.id.profilePicture);
 
 
@@ -194,14 +190,9 @@ public class Menu extends AppCompatActivity {
 
 
 
-        profileName.setOnClickListener(new View.OnClickListener() {
+        Edit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
-
-
-
-
 
                 Intent intent= new Intent(Menu.this, ProfileActivity.class);
                 startActivity(intent);

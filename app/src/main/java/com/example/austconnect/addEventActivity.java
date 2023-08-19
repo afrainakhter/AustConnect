@@ -205,6 +205,7 @@ public class addEventActivity extends AppCompatActivity {
 
                         hashMap.put("pImage",downloadUri);
                         hashMap.put("pTime",timeStamp);
+                        hashMap.put("pLike","0");
 
                         FirebaseDatabase database=FirebaseDatabase.getInstance();
 
@@ -268,6 +269,7 @@ public class addEventActivity extends AppCompatActivity {
 
             hashMap.put("pImage","noImage");
             hashMap.put("pTime",timeStamp);
+            hashMap.put("pLike","0");
 
             FirebaseDatabase database=FirebaseDatabase.getInstance();
 
@@ -475,4 +477,12 @@ public class addEventActivity extends AppCompatActivity {
             startActivity(new Intent(addEventActivity.this,MainActivity.class));
 
         }    }
+
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        startActivity(new Intent(addEventActivity.this,Event.class));
+
+    }
 }

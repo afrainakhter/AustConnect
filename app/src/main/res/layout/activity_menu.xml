@@ -68,6 +68,10 @@
                 >
 
             </ImageButton>
+
+
+
+
             <ImageButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -102,42 +106,54 @@
 
         </TextView>
 
-        <LinearLayout
-            android:layout_width="380dp"
+        <TextView
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:backgroundTint="#D4EDD8"
-            android:layout_marginTop="10dp"
-            android:layout_marginLeft="20dp"
-            android:layout_marginBottom="10dp"
+            android:text="Edit Profile"
+            android:textSize="20dp"
+            android:layout_marginLeft="10dp"
+            android:id="@+id/EditProfile"
+            android:drawableLeft="@drawable/baseline_edit_24"
+            android:layout_marginBottom="20dp"
+
             >
 
-            <de.hdodenhof.circleimageview.CircleImageView
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:src="@drawable/profile"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="5dp"
-                android:id="@id/profilePicture"
-                >
+        </TextView>
+<LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    >
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
 
 
-            </de.hdodenhof.circleimageview.CircleImageView>
+        android:src="@drawable/profile"
+        android:layout_marginLeft="20dp"
+        android:id="@+id/profilePicture"
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Profile Name"
-                android:textSize="25dp"
-                android:layout_margin="10dp"
-                android:textColor="@color/black"
-                android:id="@+id/profileName"
-                >
+        >
+
+    </ImageView>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ProfileName"
+        android:textSize="30dp"
+        android:layout_marginLeft="20dp"
+        android:id="@+id/profileName"
+
+        >
+
+    </TextView>
 
 
-            </TextView>
 
-        </LinearLayout>
+</LinearLayout>
+
+
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"

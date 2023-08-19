@@ -2,14 +2,14 @@ package com.example.austconnect.models;
 
 public class ModelPost {
 
-    String pId,pTitle,pTime,Description,pImage,uid,email,uDP,name;
+    String pLike,pId,pTitle,pTime,Description,pImage,uid,email,uDP,name;
 
 
     public ModelPost() {
 
     }
 
-    public ModelPost(String pId, String pTitle, String pTime, String description, String pImage, String uid, String email, String uDP, String name) {
+    public ModelPost(String pLike,String pId, String pTitle, String pTime, String description, String pImage, String uid, String email, String uDP, String name) {
         this.pId = pId;
         this.pTitle = pTitle;
         this.pTime = pTime;
@@ -19,6 +19,15 @@ public class ModelPost {
         this.email = email;
         this.uDP = uDP;
         this.name = name;
+        this.pLike = pLike;
+    }
+
+    public String getpLike() {
+        return pLike;
+    }
+
+    public void setpLike(String pLike) {
+        this.pLike = pLike;
     }
 
     public String getpId() {
