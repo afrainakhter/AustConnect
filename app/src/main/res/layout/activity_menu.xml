@@ -118,6 +118,7 @@
                 android:src="@drawable/profile"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="5dp"
+                android:id="@id/profilePicture"
                 >
 
 
@@ -151,6 +152,7 @@
             android:layout_height="80dp"
             android:layout_margin="20dp"
             android:backgroundTint="#FFFFFF"
+            android:id="@+id/friendCard"
 
 
 
@@ -184,7 +186,7 @@
             android:layout_height="80dp"
             android:layout_margin="20dp"
             android:backgroundTint="@color/white"
-
+            android:id="@+id/eventCard"
 
 
             >
@@ -263,6 +265,7 @@
                 android:layout_height="80dp"
                 android:layout_margin="20dp"
                 android:backgroundTint="#FFFFFF"
+                android:id="@+id/blood"
 
 
 
@@ -307,6 +310,7 @@
                 android:layout_height="80dp"
                 android:layout_margin="20dp"
                 android:backgroundTint="#FFFFFF"
+                android:id="@+id/jobOffers"
 
 
 
@@ -340,7 +344,7 @@
                 android:layout_height="80dp"
                 android:layout_margin="20dp"
                 android:backgroundTint="#FFFFFF"
-
+                android:id="@+id/HelpCard"
 
 
                 >
@@ -384,7 +388,7 @@
                 android:layout_height="80dp"
                 android:layout_margin="20dp"
                 android:backgroundTint="#FFFFFF"
-
+                android:id="@+id/CommentsCard"
 
 
                 >
@@ -417,6 +421,7 @@
                 android:layout_height="80dp"
                 android:layout_margin="20dp"
                 android:backgroundTint="#FFFFFF"
+                android:id="@+id/research"
 
 
 
@@ -469,7 +474,7 @@
                 android:src="@drawable/baseline_settings_24"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="5dp"
-                android:backgroundTint="#ECE3E3"
+                android:backgroundTint="@color/lightgreen"
                 >
 
 
@@ -507,7 +512,7 @@
                 android:src="@drawable/baseline_logout_24"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="5dp"
-                android:backgroundTint="#ECE3E3"
+                android:backgroundTint="@color/lightgreen"
                 >
 
 

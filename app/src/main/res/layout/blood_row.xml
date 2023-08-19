@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:ignore="ExtraText">
+
+
+
+    app:cardCornerRadius="3dp"
+    app:contentPadding="5dp"
+    app:cardElevation="3dp"
+    app:cardUseCompatPadding="true"
+    app:cardBackgroundColor="@color/white"
+
+
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center_vertical"
+
+
+
+
+            >
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:id="@+id/postDP"
+                android:src="@drawable/profile"
+                android:scaleType="centerCrop"
+
+
+                >
+
+            </de.hdodenhof.circleimageview.CircleImageView>
+
+            <LinearLayout
+                android:layout_marginLeft="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="1"
+                >
+
+                <TextView
+
+                    android:id="@+id/username"
+
+                    android:text="Name"
+                    android:textSize="20dp"
+                    android:textColor="@color/black"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                </TextView>
+                <TextView
+
+                    android:id="@+id/postTime"
+
+                    android:text="33 min"
+                    android:textSize="20dp"
+                    android:textColor="@color/black"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                </TextView>
+
+
+            </LinearLayout>
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/baseline_more_horiz_24"
+                android:backgroundTint="@color/white"
+                android:id="@+id/moreBloodBtn"
+                >
+
+
+            </ImageButton>
+
+
+
+
+
+        </LinearLayout>
+        <TextView
+
+            android:id="@+id/contactName"
+            android:layout_marginTop="20dp"
+            android:text="Contact Name"
+            android:textSize="20dp"
+            android:textColor="@color/black"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:autoLink="all"
+            >
+
+        </TextView>
+
+        <TextView
+
+            android:id="@+id/bloodtypeTv"
+            android:layout_marginTop="10dp"
+            android:text="Blood Type"
+            android:textSize="20dp"
+            android:textColor="@color/black"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:autoLink="all"
+            >
+
+        </TextView>
+
+        <TextView
+
+            android:id="@+id/patientDescriptionTv"
+            android:layout_marginTop="10dp"
+            android:text="Patient Description"
+            android:textSize="20dp"
+            android:textColor="@color/black"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:autoLink="all"
+            >
+
+        </TextView>
+        <TextView
+
+
+            android:layout_marginTop="10dp"
+            android:text="Reports:"
+            android:textSize="20dp"
+            android:textColor="@color/black"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:autoLink="all"
+            >
+
+        </TextView>
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:background="@color/lightgreen"
+            android:id="@+id/bloodImg"
+            >
+
+        </ImageView>
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/lightgreen"
+            >
+
+
+        </View>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center">
+
+            <Button
+                android:id="@+id/CommentBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Comment"
+                android:drawableLeft="@drawable/baseline_chat_24"
+                android:textSize="15dp"
+                android:textColor="@color/black"
+                android:backgroundTint="@color/lightgreen"
+
+
+                >
+
+            </Button>
+
+            <Button
+                android:id="@+id/ShareBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:backgroundTint="@color/lightgreen"
+                android:drawableLeft="@drawable/baseline_share_24"
+                android:text="Share"
+                android:textColor="@color/black"
+                android:textSize="15dp"
+
+                >
+
+            </Button>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

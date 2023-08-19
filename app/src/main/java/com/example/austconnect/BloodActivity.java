@@ -8,14 +8,11 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.Toast;
 
-import com.example.austconnect.adapters.AdapterEvent;
-import com.example.austconnect.adapters.AdapterPost;
-import com.example.austconnect.models.ModelEvent;
-import com.example.austconnect.models.ModelPost;
+import com.example.austconnect.adapters.AdapterBlood;
+import com.example.austconnect.models.ModelBlood;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
@@ -27,36 +24,30 @@ import com.google.firebase.database.ValueEventListener;
 import java.util.ArrayList;
 import java.util.List;
 
-import de.hdodenhof.circleimageview.CircleImageView;
-
-public class Event extends AppCompatActivity {
-
-
+public class BloodActivity extends AppCompatActivity {
+    RecyclerView recyclerView;
+    AdapterBlood adapterBlood;
+    List<ModelBlood>bloodList;
     FirebaseAuth auth;
     FirebaseUser user;
-    ImageButton menu,event,notification,friends,jobsite,home,addEvent;
 
-    RecyclerView recyclerView;
-    List<ModelEvent>eventList;
-    AdapterEvent adapterEvent;
-    DatabaseReference databaseReference;
+    ImageButton home,event,jobsite,friends,notification,addBlood;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_event);
+        setContentView(R.layout.activity_blood);
+
 
         auth=FirebaseAuth.getInstance();
         user=auth.getCurrentUser();
-        menu=findViewById(R.id.menu);
         home=findViewById(R.id.home);
         event=findViewById(R.id.event);
         friends=findViewById(R.id.friend);
         notification=findViewById(R.id.notification);
         jobsite=findViewById(R.id.jobSite);
-        recyclerView=findViewById(R.id.eventRecycler);
-        addEvent=findViewById(R.id.addEvent);
-         user = FirebaseAuth.getInstance().getCurrentUser();
+        recyclerView=findViewById(R.id.bloodRecycler);
+        addBlood=findViewById(R.id.addBlood);
 
 
         LinearLayoutManager linearLayoutManager=new LinearLayoutManager(this);
@@ -64,78 +55,60 @@ public class Event extends AppCompatActivity {
         linearLayoutManager.setReverseLayout(true);
 
         recyclerView.setLayoutManager(linearLayoutManager);
-        eventList=new ArrayList<>();
-        loadevent();
+        bloodList=new ArrayList<>();
 
-
+        loadPost();
         if(user==null){
 
-            Intent intent= new Intent(Event.this, login.class);
+            Intent intent= new Intent(BloodActivity.this, login.class);
             startActivity(intent);
             finish();
         }
 
-
-        menu.setOnClickListener(new View.OnClickListener() {
+        friends.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent= new Intent(Event.this, Menu.class);
+                Intent intent= new Intent(BloodActivity.this, Friend.class);
                 startActivity(intent);
                 finish();
             }
         });
 
+
+
+
+
+        event.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent= new Intent(BloodActivity.this, Event.class);
+                startActivity(intent);
+                finish();
+            }
+        });
 
 
         home.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent= new Intent(Event.this, MainActivity.class);
+                Intent intent= new Intent(BloodActivity.this, MainActivity.class);
                 startActivity(intent);
                 finish();
             }
         });
-        event.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent= new Intent(Event.this, Event.class);
-                startActivity(intent);
-                finish();
-            }
-        });
-        addEvent.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent= new Intent(Event.this, addEventActivity.class);
-                startActivity(intent);
-                finish();
-            }
-        });
-
-
-        notification.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent= new Intent(Event.this, Notification.class);
-                startActivity(intent);
-                finish();
-            }
-        });
-
-        friends.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent= new Intent(Event.this, Friend.class);
-                startActivity(intent);
-                finish();
-            }
-        });
-
 
         jobsite.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent= new Intent(Event.this, JobSite.class);
+                Intent intent= new Intent(BloodActivity.this, JobSite.class);
+                startActivity(intent);
+                finish();
+            }
+        });
+        addBlood.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent= new Intent(BloodActivity.this, AddBloodPostActivity.class);
                 startActivity(intent);
                 finish();
             }
@@ -147,21 +120,21 @@ public class Event extends AppCompatActivity {
     }
 
 
-    private void loadevent() {
+    private void loadPost() {
 
-      //String  myUid=user.getUid();
-        DatabaseReference dbRef= FirebaseDatabase.getInstance().getReference("Events");
+        //String  myUid=user.getUid();
+        DatabaseReference dbRef= FirebaseDatabase.getInstance().getReference("Bloods");
         dbRef.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
-                eventList.clear();
+                bloodList.clear();
                 for(DataSnapshot ds:snapshot.getChildren()){
 
-                    ModelEvent modelEvent=ds.getValue(ModelEvent.class);
-                    eventList.add(modelEvent);
+                  ModelBlood modelBlood=ds.getValue(ModelBlood.class);
+                    bloodList.add(modelBlood);
 
-                    adapterEvent=new AdapterEvent(Event.this,eventList);
-                    recyclerView.setAdapter(adapterEvent);
+                    adapterBlood=new AdapterBlood(BloodActivity.this,bloodList);
+                    recyclerView.setAdapter(adapterBlood);
 
 
 
@@ -174,8 +147,21 @@ public class Event extends AppCompatActivity {
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
 
-                Toast.makeText(Event.this, ""+error.getMessage(), Toast.LENGTH_SHORT).show();
+                Toast.makeText(BloodActivity.this, ""+error.getMessage(), Toast.LENGTH_SHORT).show();
             }
         });
+    }
+
+
+
+
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+
+        Intent intent= new Intent(BloodActivity.this, Menu.class);
+        startActivity(intent);
+        finish();
     }
 }

@@ -5,7 +5,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:background="@color/lightgreen"
+    >
 
 
 
@@ -16,13 +18,15 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    >
+    android:background="@color/white"  >
 
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
+
+
         >
     <ImageView
         android:layout_width="200dp"
@@ -36,10 +40,27 @@
         <SearchView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="130dp"
+            android:layout_marginLeft="80dp"
+            android:id="@+id/search_post"
+           android:layout_gravity="right"
+            android:gravity="right"
+
             >
 
         </SearchView>
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/baseline_chat_24"
+            android:backgroundTint="@color/white"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="2dp"
+            android:id="@+id/chat"
+
+            >
+
+        </ImageButton>
+
 
     </LinearLayout>
     <LinearLayout
@@ -125,6 +146,7 @@
     android:src="@drawable/profile"
     android:layout_marginLeft="20dp"
     android:layout_marginTop="10dp"
+    android:id="@+id/profilePicture"
     >
 
 
@@ -136,6 +158,7 @@
         android:layout_marginTop="10dp"
         android:layout_marginLeft="10dp"
         android:background="@drawable/edittext"
+        android:id="@+id/createPost"
         >
 
     </androidx.appcompat.widget.AppCompatEditText>
@@ -154,7 +177,17 @@
 
 </LinearLayout>
 
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/lightgreen"
+        android:id="@+id/post_recycle"
 
+
+
+        >
+
+    </androidx.recyclerview.widget.RecyclerView>
 
 
 

@@ -88,6 +88,39 @@
 
         </LinearLayout>
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Up Coming Events..."
+            android:textColor="#5E5959"
+            android:textSize="30dp"
+
+
+            >
+
+        </TextView>
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/baseline_add_circle_outline_24"
+            android:backgroundTint="#FFFFFF"
+            android:id="@+id/addEvent"
+
+            >
+
+        </ImageButton>
+
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/eventRecycler"
+            >
+
+        </androidx.recyclerview.widget.RecyclerView>
+
     </LinearLayout>
 
 

@@ -3,9 +3,9 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <uses-feature android:name="android.hardware.camera.any" />
+
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.INTERNET" />
@@ -20,6 +20,24 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AustConnect"
         tools:targetApi="31">
+        <activity
+            android:name=".AddBloodPostActivity"
+            android:exported="false" />
+        <activity
+            android:name=".BloodActivity"
+            android:exported="false" />
+        <activity
+            android:name=".AddJobActivity"
+            android:exported="false" />
+        <activity
+            android:name=".addEventActivity"
+            android:exported="false" />
+        <activity
+            android:name=".AddPostActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ChatActivity"
+            android:exported="false" />
         <activity
             android:name=".StudentActivity"
             android:exported="false" />

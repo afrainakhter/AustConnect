@@ -444,6 +444,15 @@ storageReference1.putFile(uri).addOnSuccessListener(new OnSuccessListener<Upload
 
     }
 
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+
+        Intent intent= new Intent(ProfileActivity.this, Menu.class);
+        startActivity(intent);
+        finish();
+    }
+
 
 
 
