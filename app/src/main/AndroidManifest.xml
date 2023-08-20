@@ -21,6 +21,12 @@
         android:theme="@style/Theme.AustConnect"
         tools:targetApi="31">
         <activity
+            android:name=".AddReasearchActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Research"
+            android:exported="false" />
+        <activity
             android:name=".AddBloodPostActivity"
             android:exported="false" />
         <activity

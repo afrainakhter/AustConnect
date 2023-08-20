@@ -142,6 +142,14 @@ public class Menu extends AppCompatActivity {
                 finish();
             }
         });
+        research.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent= new Intent(Menu.this, Research.class);
+                startActivity(intent);
+                finish();
+            }
+        });
 
         logout.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -195,8 +195,7 @@
         android:textSize="20dp"
         android:textColor="@color/black"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:minHeight="200dp"
+        android:layout_height="200dp"
         >
 
     </ImageView>

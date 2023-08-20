@@ -90,6 +90,14 @@ public class Friend extends AppCompatActivity {
                 finish();
             }
         });
+        jobsite.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent= new Intent(Friend.this, JobSite.class);
+                startActivity(intent);
+                finish();
+            }
+        });
 
         getAllUser();
 
